@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Practical1
 {
@@ -12,7 +12,7 @@ namespace Practical1
         private double percentage;
         private double fees;
 
-        // Public constructor
+        // Constructor
         public Student()
         {
             Console.WriteLine("====================================");
@@ -20,7 +20,7 @@ namespace Practical1
             Console.WriteLine("====================================");
         }
 
-        // Public method to accept student details
+        // Method to accept student details
         public void GetData()
         {
             Console.Write("Enter Student ID: ");
@@ -42,7 +42,7 @@ namespace Practical1
             fees = Convert.ToDouble(Console.ReadLine());
         }
 
-        // Public method to display details
+        // Method to display student details
         public void Display()
         {
             Console.WriteLine("\n===== Student Details =====");
@@ -54,7 +54,7 @@ namespace Practical1
             Console.WriteLine("Course Fees     : " + fees);
         }
 
-        // Public method for scholarship calculation
+        // Method to check scholarship
         public void ScholarshipCheck()
         {
             double rate;
@@ -67,7 +67,7 @@ namespace Practical1
             else if (percentage >= 70)
                 rate = 0.10;       // 10% scholarship
             else
-                rate = 0;
+                rate = 0;          // No scholarship
 
             finalFees = fees - (fees * rate);
 
@@ -81,14 +81,20 @@ namespace Practical1
     {
         static void Main(string[] args)
         {
-            // Object creation
+            // Create Student object
             Student student = new Student();
 
+            // Accept student details
             student.GetData();
+
+            // Display student details
             student.Display();
+
+            // Calculate scholarship and final fees
             student.ScholarshipCheck();
 
             Console.ReadKey();
         }
     }
 }
+
