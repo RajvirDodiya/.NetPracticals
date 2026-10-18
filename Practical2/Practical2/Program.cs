@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Practical2
 {
     class Employee{
-
 
            public int id;
            public string name;
@@ -16,8 +10,6 @@ namespace Practical2
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("--------Employee Payroll System----------");
             Console.WriteLine("-----------------------------------------");
-
-
         }
         public void AcceptDetails(){
             Console.WriteLine("Enter Employee ID:");

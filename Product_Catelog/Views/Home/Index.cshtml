@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<main>
+    <section class="p-5 mb-4 bg-light rounded-3 mt-4 border">
+        <div class="container-fluid py-3">
+            <h1 class="display-5 fw-bold text-primary">PrimeTech Catalog System</h1>
+            <p class="col-md-8 fs-5 text-muted">
+                Welcome to the PrimeTech Product Catalog ASP.NET MVC application. Browse through our categorized electronic devices, inspect technical specifications, and manage product inventory.
+            </p>
+            <a href="@Url.Action("Index", "Products")" class="btn btn-primary btn-lg px-4 mt-2">
+                Explore Product Catalog &raquo;
+            </a>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Dynamic MVC Routing</h4>
+                <p class="text-secondary">Controller-driven data binding showcasing clean separation between models, views, and controllers.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Product Details</h4>
+                <p class="text-secondary">Parameterized action methods delivering item-specific details with Linq queries.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Responsive Interface</h4>
+                <p class="text-secondary">Bootstrap 5 integrated UI styled for mobile, tablet, and desktop viewing experiences.</p>
+            </div>
+        </div>
+    </div>
+</main>

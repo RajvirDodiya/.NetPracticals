@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = "Student Portal";
+}
+
+<main>
+    <section class="p-5 mb-4 bg-light rounded-3 mt-4 border">
+        <div class="container-fluid py-3">
+            <h1 class="display-5 fw-bold text-success">EduPulse Student Feedback System</h1>
+            <p class="col-md-8 fs-5 text-muted">
+                An interactive ASP.NET MVC portal enabling students to review courses, record qualitative feedback, and evaluate faculty instruction across academic subjects.
+            </p>
+            <a href="@Url.Action("Index", "Feedback")" class="btn btn-success btn-lg px-4 mt-2">
+                Open Feedback Module &raquo;
+            </a>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Form Validation</h4>
+                <p class="text-secondary">Robust DataAnnotations checking for mandatory fields, regex-verified IDs, and rating range validation.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Partial Views</h4>
+                <p class="text-secondary">Reusable UI components with Razor partial views rendering shared student appraisal headers.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded-3 bg-white h-100 shadow-sm">
+                <h4>Response Aggregation</h4>
+                <p class="text-secondary">Dynamic tabular presentation listing submitted appraisals with color-coded satisfaction scores.</p>
+            </div>
+        </div>
+    </div>
+</main>
