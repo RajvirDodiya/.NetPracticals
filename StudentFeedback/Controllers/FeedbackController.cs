@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
 using StudentFeedback.Models;
 
@@ -7,60 +6,48 @@ namespace StudentFeedback.Controllers
 {
     public class FeedbackController : Controller
     {
-        // In-memory collection storing student feedback entries for the session
-        private static readonly List<Feedback> feedbackRepository = new List<Feedback>
+        private static List<Feedback> feedbackList = new List<Feedback>
         {
             new Feedback
             {
                 EnrollmentNumber = "92400120478",
                 StudentName = "Rajvirsinh Dodiya",
-                SubjectName = ".NET Framework & C# Programming",
+                SubjectName = ".NET Technologies",
                 Rating = 5,
-                Comments = "Practical sessions provided great insight into ASP.NET MVC architecture, controllers, and view rendering."
-            },
-            new Feedback
-            {
-                EnrollmentNumber = "92200103018",
-                StudentName = "Dev Patel",
-                SubjectName = "Enterprise Web Development",
-                Rating = 4,
-                Comments = "Enjoyed the hands-on lab assignments on Model-View-Controller pattern and entity validation."
+                Comments = "Practical exercises were clear and informative."
             }
         };
 
-        // GET: Feedback / Index (Portal landing page)
-        [HttpGet]
+        // GET: Feedback
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Feedback / Create (Form view to submit new feedback)
-        [HttpGet]
+        // GET: Feedback/Create
         public ActionResult Create()
         {
             return View(new Feedback());
         }
 
-        // POST: Feedback / Create (Processes and validates feedback submission)
+        // POST: Feedback/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Feedback feedback)
         {
             if (ModelState.IsValid)
             {
-                feedbackRepository.Add(feedback);
+                feedbackList.Add(feedback);
                 return RedirectToAction("List");
             }
 
             return View(feedback);
         }
 
-        // GET: Feedback / List (Renders summary table of all submitted responses)
-        [HttpGet]
+        // GET: Feedback/List
         public ActionResult List()
         {
-            return View(feedbackRepository.ToList());
+            return View(feedbackList);
         }
     }
 }
