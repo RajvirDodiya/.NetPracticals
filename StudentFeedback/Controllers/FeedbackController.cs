@@ -13,7 +13,7 @@ namespace StudentFeedback.Controllers
             new Feedback
             {
                 EnrollmentNumber = "92200103045",
-                StudentName = "Rajvir Sinh",
+                StudentName = "Rajvirsinh Dodiya",
                 SubjectName = ".NET Framework & C# Programming",
                 Rating = 5,
                 Comments = "Practical sessions provided great insight into ASP.NET MVC architecture, controllers, and view rendering."
